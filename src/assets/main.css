@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+--font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+
+--color-brand-primary: #E84A5F;
+--color-brand-dark:     #2E2E2E;
+--color-brand-muted:    #BDBDBD;
+--color-brand-bg:       #F7F7F8; 
+
+--radius-xl: 0.875rem;
+--radius-2xl: 1rem;
+
+--shadow-soft: 0 8px 20px 0 rgb(0 0 0 / 0.06);
+}
+
+:root { background: var(--color-brand-bg); }
