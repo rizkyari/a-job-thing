@@ -68,7 +68,7 @@ export const useJobsStore = defineStore('jobs', {
          */
         async goToPage(page: number) {
             if (page < 1 || (this.lastPage && page > this.lastPage)) return
-            await this.load({ page })
+            this.page = page  
         },
 
         /**
