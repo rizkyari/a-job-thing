@@ -1,0 +1,18 @@
+{
+    "app": {
+        "title": "Daftar Pekerjaan",
+        "subtitle": "Jelajahi dan filter lowongan dari MauKerja"
+    },
+    "nav": {
+        "jobs": "Pekerjaan",
+        "language": "Bahasa"
+    },
+    "lang": {
+        "en": "Inggris",
+        "id": "Indonesia"
+    },
+    "common": {
+        "search": "Cari",
+        "view_detail": "Lihat Detail"
+    }
+}

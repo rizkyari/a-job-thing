@@ -1,0 +1,18 @@
+{
+    "app": {
+        "title": "Job Listings",
+        "subtitle": "Browse and filter MauKerja jobs"
+    },
+    "nav": {
+        "jobs": "Jobs",
+        "language": "Language"
+    },
+    "lang": {
+        "en": "English",
+        "id": "Indonesian"
+    },
+    "common": {
+        "search": "Search",
+        "view_detail": "View Detail"
+    }
+}
