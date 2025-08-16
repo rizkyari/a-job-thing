@@ -1,13 +1,14 @@
 <template>
-    <header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b">
+    <div>
+        <header class="sticky top-0 z-10 bg-brand-primary backdrop-blur border-b border-red-500">
         <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-            <h1 class="text-lg font-semibold cursor-pointer">AJT</h1>
+            <img :src="Logo" class="h-10"/>
 
             <div class="flex items-center gap-2">
-                <label for="lang" class="text-sm text-gray-600">{{ t('nav.language') }}</label>
+                <label for="lang" class="text-sm text-white">{{ t('nav.language') }}</label>
                 <select
                 id="lang"
-                class="rounded-lg border px-2 py-1 text-sm bg-white"
+                class="rounded-xl cursor-pointer border px-2 py-1 text-sm bg-white"
                 :value="locale"
                 @change="onChangeLang"
                 >
@@ -16,12 +17,16 @@
                 </select>
             </div>
         </div>
-    </header>
+        </header>
+        <FiltersBar/>
+    </div>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { setLocale } from '@/i18n';
+import FiltersBar from '@/components/common/FiltersBar.vue';
+import Logo from '@/assets/images/maukerja.png';
 
 const { t, locale } = useI18n()
 

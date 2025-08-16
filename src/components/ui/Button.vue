@@ -14,9 +14,9 @@ const props = withDefaults(defineProps<{
     :is="props.as"
     :href="props.as === 'a' ? href : undefined"
     :disabled="props.as === 'button' ? disabled || loading : undefined"
-    class="inline-flex items-center justify-center rounded-lg px-3 py-2 transition border text-sm cursor-pointer"
+    class="inline-flex items-center justify-center px-3 py-2 transition border text-sm cursor-pointer"
     :class="{
-        'bg-black text-white border-black': variant === 'primary',
+        'bg-brand-primary text-white border-brand-primary': variant === 'primary',
         'bg-white text-black border-gray-300': variant === 'secondary',
         'bg-transparent text-black border-transparent': variant === 'ghost',
         'opacity-60 pointer-events-none': disabled || loading

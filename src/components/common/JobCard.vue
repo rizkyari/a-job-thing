@@ -36,8 +36,8 @@
                 </p>
 
                 <div class="mt-3 pt-1 pb-1 grid grid-cols-2 items-center gap-4 text-sm border-t-4 border-brand-bg">
-                    <Button variant="ghost" class="hover:bg-red-50"><img :src="Heart" class="h-4 w-4 mr-2"/>Save</Button>
-                    <Button variant="ghost" class="hover:bg-gray-50" @click="$router.push(`/jobs/${job.id}`)"><img :src="Download" class="h-4 w-4 mr-2"/>Apply</Button>
+                    <Button variant="ghost" class="hover:bg-red-50"><img :src="Heart" class="h-4 w-4 mr-2"/>{{ t('filters.save') }}</Button>
+                    <Button variant="ghost" class="hover:bg-gray-50" @click="$router.push(`/jobs/${job.id}`)"><img :src="Download" class="h-4 w-4 mr-2"/>{{ t('filters.apply') }}</Button>
                 </div> 
             </div>
         </div>
@@ -48,6 +48,7 @@
 import Card from '@/components/ui/Card.vue'
 import Button from '@/components/ui/Button.vue'
 import type { Job } from '@/types/job'
+import { useI18n } from 'vue-i18n';
 
 import IconMoney from '@/assets/icons/money.svg'
 import PinLocation from '@/assets/icons/location.svg'
@@ -56,5 +57,6 @@ import Heart from '@/assets/icons/heart.svg'
 import Download from '@/assets/icons/downloads.svg'
 
 const props = defineProps<{ job: Job }>()
+const { t } = useI18n()
 </script>
 

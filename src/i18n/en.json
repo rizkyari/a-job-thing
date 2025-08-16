@@ -1,7 +1,6 @@
 {
     "app": {
-        "title": "Job Listings",
-        "subtitle": "Browse and filter MauKerja jobs"
+        "title": "Job Listings"
     },
     "nav": {
         "jobs": "Jobs",
@@ -14,5 +13,19 @@
     "common": {
         "search": "Search",
         "view_detail": "View Detail"
+    },
+    "filters": {
+        "apply": "Apply",
+        "save": "Save",
+        "prev": "Prev",
+        "next": "Next",
+        "page": "Page",
+        "job": "Job, company…",
+        "location": "Location",
+        "salary": "Min salary",
+        "anyType": "Any Type",
+        "fullTime": "Full Time",
+        "partTime": "Part Time",
+        "contract": "Contract"
     }
 }
