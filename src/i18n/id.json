@@ -1,7 +1,6 @@
 {
     "app": {
-        "title": "Daftar Pekerjaan",
-        "subtitle": "Jelajahi dan filter lowongan dari MauKerja"
+        "title": "Daftar Pekerjaan"
     },
     "nav": {
         "jobs": "Pekerjaan",
@@ -14,5 +13,19 @@
     "common": {
         "search": "Cari",
         "view_detail": "Lihat Detail"
+    },
+    "filters": {
+        "apply": "Lamar",
+        "save": "Simpan",
+        "prev": "Sebelumnya",
+        "next": "Selanjutnya",
+        "page": "Halaman",
+        "job": "Pekerjaaan, Perusahaan...",
+        "location": "Lokasi",
+        "salary": "Gaji Minimum",
+        "anyType": "Semua Tipe",
+        "fullTime": "Penuh Waktu",
+        "partTime": "Paruh Waktu",
+        "contract": "Kontrak"
     }
 }
