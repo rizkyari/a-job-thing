@@ -24,7 +24,7 @@ export type JobFilters = {
 /**
  * Build request params that match the API's filter format
  */
-function buildParams(f: JobFilters = {}) {
+export function buildParams(f: JobFilters = {}) {
     const p: Record<string, any> = {}
     if(f.page) p.page = f.page
     if(f.id) p['filter[id]'] = f.id
