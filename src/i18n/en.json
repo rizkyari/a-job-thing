@@ -12,7 +12,9 @@
     },
     "common": {
         "search": "Search",
-        "view_detail": "View Detail"
+        "view_detail": "View Detail",
+        "back": "Back",
+        "share": "Share"
     },
     "filters": {
         "apply": "Apply",
