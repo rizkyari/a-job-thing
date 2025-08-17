@@ -29,5 +29,14 @@
         "fullTime": "Full Time",
         "partTime": "Part Time",
         "contract": "Contract"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "The page you’re looking for doesn’t exist.",
+        "toHome": "Back to home"
+    },
+    "copyright": {
+        "copyright": "Copyright",
+        "desc": "All rights reserved."
     }
 }

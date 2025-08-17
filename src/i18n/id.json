@@ -29,5 +29,14 @@
         "fullTime": "Penuh Waktu",
         "partTime": "Paruh Waktu",
         "contract": "Kontrak"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Halaman yang Anda cari tidak tersedia.",
+        "toHome": "Kembali ke beranda"
+    },
+    "copyright": {
+        "copyright": "Hak cipta",
+        "desc": "Semua hak dilindungi undang-undang."
     }
 }
