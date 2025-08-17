@@ -1,7 +1,7 @@
 <template>
-    <footer class="border-t bg-white">
-        <div class="mx-auto max-w-6xl px-4 py-4 text-sm text-gray-600">
-            {{ year }} A Job Thing -- Demo
+    <footer class="bg-brand-primary backdrop-blur border-t border-red-500">
+        <div class="mx-auto max-w-6xl px-4 py-4 text-sm text-white text-center">
+            Copyright &copy; {{ year }} A Job Thing -- Demo. All rights reserved.
         </div>
     </footer>
 </template>

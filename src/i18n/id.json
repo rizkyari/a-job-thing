@@ -12,7 +12,9 @@
     },
     "common": {
         "search": "Cari",
-        "view_detail": "Lihat Detail"
+        "view_detail": "Lihat Detail",
+        "back": "Kembali",
+        "share": "Bagikan"
     },
     "filters": {
         "apply": "Lamar",

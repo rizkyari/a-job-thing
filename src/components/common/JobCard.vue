@@ -4,8 +4,8 @@
             <div class="flex-1">
                 <div class="p-4 flex flex-wrap items-center gap-x-3 gap-y-1">
                     <div class="h-10 w-10 rounded-tl-2xl rounded-br-2xl bg-emerald-500 text-white flex items-center justify-center font-bold overflow-hidden">
-                        <img v-if="job.company?.logo" :src="job.company.logo" alt="" class="h-full w-full object-contain" loading="lazy" />
-                        <span v-else>{{ job.company?.name?.[0] ?? 'W' }}</span>
+                        <img v-if="job.company?.logo" :src="job.company.logo" alt="company-logo.jpg" class="h-full w-full object-contain" loading="lazy" />
+                        <span v-else>{{ job.company?.name?.[0] ?? '-' }}</span>
                     </div>
                     <div>
                         <h3 class="font-semibold">
@@ -32,7 +32,7 @@
                 </span>
 
                 <p class="pl-4 pr-4 mt-3 line-clamp-2 text-sm text-gray-600">
-                    {{ job.descriptions?.requirements || job.descriptions?.responsibilities || '' }}
+                    {{ job.descriptions?.requirements || job.descriptions?.reponsibilities || '' }}
                 </p>
 
                 <div class="mt-3 pt-1 pb-1 grid grid-cols-2 items-center gap-4 text-sm border-t-4 border-brand-bg">
@@ -56,7 +56,7 @@ import BriefCase from '@/assets/icons/briefcase.svg'
 import Heart from '@/assets/icons/heart.svg'
 import Download from '@/assets/icons/downloads.svg'
 
-const props = defineProps<{ job: Job }>()
+defineProps<{ job: Job }>()
 const { t } = useI18n()
 </script>
 
