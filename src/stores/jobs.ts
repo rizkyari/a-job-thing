@@ -11,7 +11,6 @@ export const useJobsStore = defineStore('jobs', {
         page: 1,
         lastPage: 1,
         total: 0,
-
         filters: {
             q: '',
             company: '',
@@ -20,12 +19,15 @@ export const useJobsStore = defineStore('jobs', {
             salaryMax: undefined as number | undefined,
         } as Omit<JobFilters, 'page' | 'id'>,
         loading: false,
-        error: '' as string | null
+        error: '' as string | null,
+        byId: {} as Record<number, Job>,
+        currentId: null as number | null,
     }),
 
     getters: {
         hasMore: (s) => s.page < s.lastPage,
-        isEmpty: (s) => !s.loading && s.items.length === 0
+        isEmpty: (s) => !s.loading && s.items.length === 0,
+        currentJob: (s) => (s.currentId ? s.byId[s.currentId] : undefined),
     },
 
     actions: {
@@ -99,6 +101,29 @@ export const useJobsStore = defineStore('jobs', {
                 salaryMax: this.filters.salaryMax ?? undefined,
                 page: this.page > 1 ? this.page : undefined,
             }
-        }
+        },
+
+        /**
+         * fetch a single job by ID
+         */
+        async loadById(id: number, { force = false } = {}) {
+            this.currentId = id
+            if (!force && this.byId[id]) return this.byId[id]
+            this.loading = true
+            this.error = null
+
+            try {
+                const res = await fetchJobs({ id })
+                const job = res.data?.[0]
+                if (!job) throw new Error('Job not found')
+                this.byId[id] = job
+                return job
+            } catch (e: any) {
+                this.error = e?.message ?? 'Failed to load job'
+                throw e
+            } finally {
+                this.loading = false
+            }
+        },
     }
 })

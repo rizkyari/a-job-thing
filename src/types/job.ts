@@ -6,7 +6,7 @@ export interface Job {
     title: string;
     descriptions?: {
         requirements?: string;
-        responsibilities?: string;
+        reponsibilities?: string;
         benefits?: string;
     };
     company?: {
